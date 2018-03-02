@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    /**
+    *多行，只支持webkit内核
+    */
+      /* .text{
+      display: -webkit-box;
+      max-width: 200px;
+      height: 109.2px;
+      margin: 0 auto;
+      font-size: 26px;
+      line-height: 1.4;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      } */
+      /*
+      伪类
+      */
+    .text {
+        position:relative;
+        line-height:20px;
+        max-width:100px;
+        overflow:hidden;
+      }
+      .text::after {
+      	content: "\02026";      // '...'
+      	position:absolute;
+      	bottom:0;
+      	right:0;
+      	background:-webkit-linear-gradient(left,transparent,#fff 55%);
+      	background:-o-linear-gradient(right,transparent,#fff 55%);
+      	background:-moz-linear-gradient(right,transparent,#fff 55%);
+      	background:linear-gradient(to right,transparent,#fff 55%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text" id="cla">
+          巨大空间都怕惊动怕就大婆家都怕见到频道范江岸路范江岸路驸马浪费了lfk
+    </div>
+    <script>
+    /**
+    *js显示小数点也能实现 ，但是不是很好用
+    */
+//     (function(){
+//   var txt = 50;//设置留下的字数
+//    var o = document.getElementById("cla");//id   html 中设置
+//   var s = o.innerHTML;
+//   var p = document.createElement("span");
+//   var n = document.createElement("font");
+//   p.innerHTML = s.substring(0,txt);
+//   n.innerHTML = s.length > txt ? "..." : "";
+//   o.innerHTML = "";
+//   o.appendChild(p);
+//   o.appendChild(n);
+// })();
+    </script>
+  </body>
+</html>

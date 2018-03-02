@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">分段读取文件：</div>
+        <div class="panel-body">
+            <input type="file" id="file" />
+            <br />
+            <input type="button" value="中止" onclick="stop();" />&emsp;
+            <input type="button" value="继续" onclick="containue();" />
+            <br />
+            <progress id="progressOne" max="100" value="0" style="width:400px;"></progress>
+            <blockquote id="Status" style="word-break:break-all;"></blockquote>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

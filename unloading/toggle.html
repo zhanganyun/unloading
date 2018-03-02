@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        .ul{
+          width: 100px;
+        }
+        .ul>li{
+          width: 100%;
+          list-style: none;
+          height: 40px;
+        }
+        .ul>li span{
+          width: 100px;
+          height: 40px;
+          display: none;
+        }
+        .sp1{
+            display: block !important;
+          }
+          .ul>li span:first-child{
+            background-color: red;
+          }
+          .ul>li span:last-child{
+            background-color: blue;
+          }
+    </style>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <ul class="ul">
+    <li class="lii">
+      <span class="sp1"></span>
+      <span></span>
+    </li>
+  </ul>
+      <script>
+      $(".lii").click(function() {
+        console.log(  $(".lii span").eq(0).hasClass('sp1'))
+        if($(".lii span").eq(0).hasClass("sp1")){
+            $(".lii span").eq(1).attr('class','sp1').siblings('span').removeClass('sp1');
+        }else if($(".lii span").eq(1).hasClass("sp1")){
+            $(".lii span").eq(0).attr('class','sp1').siblings('span').removeClass('sp1');
+        }
+      })
+      </script>
+</body>
+</html>
